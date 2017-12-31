@@ -8,13 +8,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("support")
 public class UserController {
 
-    // Request path: /cheese
+    // Request path: /support
     @RequestMapping(value = "")
     public String index(Model model) {
 
         model.addAttribute("title", "User Support");
 
         return "user/index";
+    }
+
+    @RequestMapping(value="/about")
+    public String about(Model model) {
+
+        model.addAttribute("title", "About Payleaf");
+
+        return "about/index";
     }
 
 }

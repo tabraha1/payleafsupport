@@ -1,0 +1,84 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway|Open+Sans);
+
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.container {
+  width: 600px;
+  margin: auto;
+  border: 1px solid blue;
+  border-width: 1px 0;
+}
+
+
+h2{
+	position: relative;
+	font-family: 'Raleway', sans-serif;
+	font-size: 1eml
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #959595;
+}
+
+h2:after{
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -10px;
+	border-bottom: 3px solid #d7ebba;
+	width: 30px;
+}
+
+ul{
+	list-style: none;
+	margin: 4em 0 0;
+	padding: 0;
+}
+
+ul:after{
+	clear: both;
+	content: "";
+	display: table;
+}
+
+ul li{
+	margin-bottom: 2em;
+}
+
+ul li h3{
+	position: relative;
+	z-index: 1;
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.25em;
+	line-height: 2.5em;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+
+ul li h3:before{
+	content: "";
+	position: absolute;
+	z-index: -1;
+	background-color: #d7ebba;
+	width: 2.5em;
+	height: 2.5em;
+	border-radius: 50%;
+}
+
+ul li h3 span{
+	padding-left: 15px;
+}
+
+ul li p{
+	padding-left: 15px;
+	font-family: 'Raleweay', sans-serif;
+	font-size: 1.1em;
+	line-height: 1.6875em;
+	font-weight: 400;
+	color: #959595;
+}

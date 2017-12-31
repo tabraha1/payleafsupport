@@ -29,7 +29,7 @@
 
 
 
-<p th:unless="${users} and ${users.size()}">No issues!</p>
+<p th:unless="${issues} and ${issues.size()}">No unresolved issues!</p>
 
 
 <table class="table">
@@ -40,16 +40,16 @@
         <th>User's name</th>
     </tr>
 
-    <tr th:each="cheese : ${users}">
-        <td th:text="${cheese.name}"></td>
-        <td th:text="${cheese.description}"></td>
-        <td th:text="${cheese.getName()}"></td>
+    <tr th:each="issue : ${issues}">
+        <td th:text="${issue.name}"></td>
+        <td th:text="${issue.description}"></td>
+        <td th:text="${issue.getName()}"></td>
     </tr>
 
 </table>
 
-<a href="cheese/add">Add Issue</a>
-<a href="cheese/remove">Remove Issue</a>
+<a href="issue/add">Add Issue</a>
+<a href="issue/remove">Remove Issue</a>
 
 </body>
 </html>
