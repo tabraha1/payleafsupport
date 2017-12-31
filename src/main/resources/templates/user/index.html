@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<body class="container">
+
+<h1 th:text="${title}">Default Title</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<table class="table">
+
+    <th>About Payleaf</th>
+    <th>Signing up</th>
+    <th>Saftey</th>
+    <th>Account</th>
+    <th>Goals</th>
+
+
+    <tr>
+        <td><a href="/support/about">What is Payleaf</a></td>
+        <td><a href="/support/signup">How do I sign up</a></td>
+        <td><a href="/support/security">How secure is Payleaf</a></td>
+        <td><a href="/support/account">I can't access my account</a></td>
+        <td><a href="/support/goals">How do I reach goals</a></td>
+    </tr>
+
+</table>
+
+
+
+<p th:unless="${users} and ${users.size()}">No issues!</p>
+
+
+<table class="table">
+
+    <tr>
+        <th>Issue</th>
+        <th>Description</th>
+        <th>User's name</th>
+    </tr>
+
+    <tr th:each="cheese : ${users}">
+        <td th:text="${cheese.name}"></td>
+        <td th:text="${cheese.description}"></td>
+        <td th:text="${cheese.getName()}"></td>
+    </tr>
+
+</table>
+
+<a href="cheese/add">Add Issue</a>
+<a href="cheese/remove">Remove Issue</a>
+
+</body>
+</html>
