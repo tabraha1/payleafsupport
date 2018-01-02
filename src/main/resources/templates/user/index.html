@@ -25,6 +25,14 @@
         <td><a href="/support/goals">How do I reach goals</a></td>
     </tr>
 
+    <tr>
+        <td><a href="/support/about">Is this Paylease?</a></td>
+        <td><a href="/support/signup">How do I cancel?</a></td>
+        <td><a href="/support/security">My account has been hacked!</a></td>
+        <td><a href="/support/account">My friend wants to log in?</a></td>
+        <td><a href="/support/goals">I've reached my goal. Now What?</a></td>
+    </tr>
+
 </table>
 
 
@@ -40,16 +48,16 @@
         <th>User's name</th>
     </tr>
 
-    <tr th:each="issue : ${issues}">
-        <td th:text="${issue.name}"></td>
-        <td th:text="${issue.description}"></td>
-        <td th:text="${issue.getName()}"></td>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.description}"></td>
+        <td th:text="${user.issue.getName()}"></td>
     </tr>
 
 </table>
 
-<a href="issue/add">Add Issue</a>
-<a href="issue/remove">Remove Issue</a>
+<a href="/support/add">Add User/Issue</a> |
+<a href="user/remove">Remove User/Issue</a> |
 
 </body>
 </html>
