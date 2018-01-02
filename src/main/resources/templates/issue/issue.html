@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body class="container">
+
+<h2 th:text="${title}"></h2>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<form method="post" style="max-width:600px;">
+    <div class="form-group">
+        <label th:for="name">Details</label>
+        <input type="text" />
+    </div>
+
+
+    <input type="submit" value="Submit"/>
+</form>
+
+</body>
+</html>

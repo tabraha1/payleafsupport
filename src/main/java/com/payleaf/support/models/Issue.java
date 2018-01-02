@@ -4,6 +4,7 @@ import com.payleaf.support.models.User;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,12 +16,14 @@ public class Issue {
     private int id;
 
     @NotNull
+    @Size(min=1, max=15)
     private String name;
 
     @NotNull
     private String env;
 
     @NotNull
+    @Size(min=1, message="Must not be empty")
     private String detail;
 
     @NotNull
