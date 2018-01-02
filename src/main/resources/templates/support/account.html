@@ -1,0 +1,26 @@
+<<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+    <style>body {
+  width: 500px;
+  margin: 0 auto;
+}</style>
+</head>
+
+<body class="container">
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<h1 th:text="${title}"></h1>
+
+<div>
+    <p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
+
+    <p>By default we span 100% of the width of our parent element, and we are as tall as our child content. Our total width and height is our content + padding + border width/height.</p>
+
+    <p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
+
+</div>
+
+</body>
+</html>

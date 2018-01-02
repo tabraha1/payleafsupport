@@ -26,7 +26,7 @@ public class UserController {
         model.addAttribute("title", "User Support");
         model.addAttribute("issues", userDao.findAll());
 
-        return "user/index";
+        return "support/index";
     }
 
     @RequestMapping(value="/about")
@@ -34,7 +34,23 @@ public class UserController {
 
         model.addAttribute("title", "About Payleaf");
 
-        return "about/index";
+        return "support/about";
+    }
+
+    @RequestMapping(value="/signup")
+    public String signup(Model model) {
+
+        model.addAttribute("title", "How to signup");
+
+        return "support/signup";
+    }
+
+    @RequestMapping(value="/account")
+    public String account(Model model) {
+
+        model.addAttribute("title", "I can't access my account");
+
+        return "support/account";
     }
 
     @RequestMapping(value="add", method = RequestMethod.GET)
@@ -42,7 +58,7 @@ public class UserController {
 
         model.addAttribute("title", "Add a user");
         model.addAttribute(new User());
-        return "user/add";
+        return "support/add";
     }
 
 }
